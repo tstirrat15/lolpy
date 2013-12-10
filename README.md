@@ -18,3 +18,9 @@ lolpy = LoLpy(API_KEY)
 champions = lolpy.getchampions()
 ```
 
+###get_game(summonerid)
+Returns a python dictionary with information about the game a summoner is currently in and their recent games
+```python
+lolpy = LoLpy(API_KEY)
+game = lolpy.get_game('Siren Swag')
+```
