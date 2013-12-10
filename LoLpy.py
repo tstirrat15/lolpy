@@ -37,10 +37,10 @@ y:
         print self.makelolapicall('/v1.1/summoner/' + summonerId)
 
     def get_summoner_name_by_id(self, summonerid):
-        print self.makelolapicall('/v1.1/summoner/' + summonerId + '/masteries')
+        print self.makelolapicall('/v1.1/summoner/' + summonerId + '/name')
 
-    def get_team_by_id(self, summonerid)
-        print self.makeproapicall('/v2.1/team/by-summoner' + + '/masteries')
+    def get_team_by_id(self, summonerid):
+        print self.makeproapicall('/v2.1/team/by-summoner' + summonerid)
 
     #############
 
@@ -87,7 +87,7 @@ y:
         summonerId = get_summoner_by_name(name)['id']
         print self.makelolapicall('/v1.1/summoner/' + summonerId + '/masteries')
 
-    def get_team(self, name)
+    def get_team(self, name):
         name = name.replace(' ','')
         summonerId = get_summoner_by_name(name)['id']
         print self.makeproapicall('/v2.1/team/by-summoner' + + '/masteries')
