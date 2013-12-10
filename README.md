@@ -14,7 +14,7 @@ Python library for accessing League of Legends' API
 ###getchampions()
 
 Returns a python dictionary with all the League of Legends champions and their attributes.
-'''python
+```python
 lolpy = LoLpy(API_KEY)
 champions = lolpy.getchampions()
-'''
+```
