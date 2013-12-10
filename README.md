@@ -34,7 +34,7 @@ game = lolpy.get_game('Trick2g')
 
 ##Reducing API Calls:
 * Each method that takes a summoner name also has a method that takes a summonerID which can be found in the return of get_summoner_by_name(). This removes one request for every method.
-* To call these append "_by_id" to any method with the parameter summonerName other than get_summoner_by_name().
+* To call these append "\_by\_id" to any method with the parameter summonerName other than get_summoner_by_name().
 Example:
 ```python
 lolpy = LoLpy(API_KEY)
