@@ -18,11 +18,27 @@ lolpy = LoLpy(API_KEY)
 champions = lolpy.getchampions()
 ```
 
+###get_summoner_by_name(summonerName)
+Returns a python dictionary with information about the summoner
+```python
+lolpy = LoLpy(API_KEY)
+game = lolpy.get_summoner_by_name('Trick2g')
+```
+
 ###get_game(summonerName)
 Returns a python dictionary with information about the game a summoner is currently in and their recent games
 ```python
 lolpy = LoLpy(API_KEY)
 game = lolpy.get_game('Trick2g')
+```
+
+##Reducing API Calls to allow more requests every 10 seconds:
+Each method that takes a summoner name also has a method that takes a summonerID which can be found in the return of get_summoner_by_name(). This removes one request for every method.
+To call these append "_by_id" to any method with the parameter summonerName other than get_summoner_by_name().
+Example:
+```python
+lolpy = LoLpy(API_KEY)
+game = lolpy.get_game_by_id(summonerID)
 ```
 
 ##Notes:
