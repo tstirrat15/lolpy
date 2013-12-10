@@ -37,7 +37,6 @@ game = lolpy.get_game('Trick2g')
 * To call these append "\_by\_id" to any method with the parameter summonerName other than get_summoner_by_name().
 * Example:
 ```python
-lolpy = LoLpy(API_KEY)
 game = lolpy.get_game_by_id(summonerID)
 ```
 
