@@ -1,7 +1,7 @@
 import json
 import urllib2
 
-class Lolpy:
+class LoLpy:
     """
     A library to make API calls to the official League of Legends API
     Attributes:

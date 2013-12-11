@@ -5,7 +5,7 @@ Python library for accessing League of Legends' API
 
 ##Getting Started:
 
-1. Import lol.py into your python script.
+1. Import LoLpy.py into your python script.
 2. Initialize a new LoLpy object using LoLpy(API_KEY) where API_KEY is your applications key.
 3. Use LoLpy's methods to easily get information for your python applicatoin.
 
@@ -30,6 +30,20 @@ Returns a python dictionary with information about the game a summoner is curren
 ```python
 lolpy = LoLpy(API_KEY)
 game = lolpy.get_game('Trick2g')
+```
+
+###get_league(summonerName)
+Returns a python dictionary with information about the summoner's league
+```python
+lolpy = LoLpy(API_KEY)
+game = lolpy.get_league('Trick2g')
+```
+
+###get_stats_summary(summonerName)
+Returns a python dictionary with information about the summoner's stats
+```python
+lolpy = LoLpy(API_KEY)
+game = lolpy.get_stats_summary('Trick2g')
 ```
 
 ##Reducing API Calls:
