@@ -35,7 +35,7 @@ class LoLpy:
         """Takes summonerID
         Returns data about the league a summoner is in
         """
-        return self.makeproapicall('/v2.1/league/by-summoner/' + str(summonerid) + '/recent')
+        return self.makeproapicall('/v2.1/league/by-summoner/' + str(summonerid))
 
     def get_stats_summary_by_id(self, summonerid):
         """Takes a summonerID
