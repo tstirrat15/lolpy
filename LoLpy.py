@@ -29,55 +29,55 @@ class LoLpy:
         """Takes a summonerID, 
         Returns a python dictionary with information about the game a summoner is currently in and their recent games
         """
-        return self.makelolapicall('/v1.1/game/by-summoner/' + summonerid + '/recent')
+        return self.makelolapicall('/v1.1/game/by-summoner/' + str(summonerid) + '/recent')
 
     def get_league_by_id(self, summonerid):
         """Takes summonerID
         Returns data about the league a summoner is in
         """
-        return self.makeproapicall('/v2.1/league/by-summoner/' + summonerid + '/recent')
+        return self.makeproapicall('/v2.1/league/by-summoner/' + str(summonerid) + '/recent')
 
     def get_stats_summary_by_id(self, summonerid):
         """Takes a summonerID
         Returns summoner stats
         """
-        return self.makelolapicall('/v1.1/stats/by-summoner/' + summonerid + '/summary')
+        return self.makelolapicall('/v1.1/stats/by-summoner/' + str(summonerid) + '/summary')
 
     def get_stats_ranked_by_id(self, summonerid):
         """Takes a summonerID
         Returns summoner ranked stats
         """
-        return self.makelolapicall('/v1.1/stats/by-summoner/' + summonerid + '/ranked')
+        return self.makelolapicall('/v1.1/stats/by-summoner/' + str(summonerid) + '/ranked')
 
     def get_summoner_masteries_by_id(self, summonerid):
         """Takes a summonerID
         Returns summoner masteries pages
         """
-        return self.makelolapicall('/v1.1/summoner/' + summonerid + '/masteries')
+        return self.makelolapicall('/v1.1/summoner/' + str(summonerid) + '/masteries')
 
     def get_summoner_runes_by_id(self, summonerid):
         """Takes a summonerID
         Returns summoner runes pages
         """
-        return self.makelolapicall('/v1.1/summoner/' + summonerid + '/runes')
+        return self.makelolapicall('/v1.1/summoner/' + str(summonerid) + '/runes')
 
     def get_summoner_by_id(self, summonerid):
         """Takes a summonerID
         Returns information about a summoner
         """
-        return self.makelolapicall('/v1.1/summoner/' + summonerid)
+        return self.makelolapicall('/v1.1/summoner/' + str(summonerid))
 
     def get_summoner_name_by_id(self, summonerid):
         """Takes a summonerID
         Returns a summoner name
         """
-        return self.makelolapicall('/v1.1/summoner/' + summonerid + '/name')
+        return self.makelolapicall('/v1.1/summoner/' + str(summonerid) + '/name')
 
     def get_team_by_id(self, summonerid):
         """Takes a summonerID
         Returns information about teams a summoner is on
         """
-        return self.makeproapicall('/v2.1/team/by-summoner' + summonerid)
+        return self.makeproapicall('/v2.1/team/by-summoner' + str(summonerid))
 
     #############
 
@@ -93,7 +93,7 @@ class LoLpy:
         """
         name = name.replace(' ','')
         summonerid = get_summoner_by_name(name)['id']
-        return self.makelolapicall('/v1.1/game/by-summoner/' + summonerid + '/recent')
+        return self.makelolapicall('/v1.1/game/by-summoner/' + str(summonerid) + '/recent')
 
     def get_league(self, name):
         """Takes summoner name
@@ -101,7 +101,7 @@ class LoLpy:
         """
         name = name.replace(' ','')
         summonerid = get_summoner_by_name(name)['id']
-        return self.makeproapicall('/v2.1/league/by-summoner/' + summonerid + '/recent')
+        return self.makeproapicall('/v2.1/league/by-summoner/' + str(summonerid) + '/recent')
 
     def get_stats_summary(self, name):
         """Takes a summoner name
@@ -109,7 +109,7 @@ class LoLpy:
         """
         name = name.replace(' ','')
         summonerid = get_summoner_by_name(name)['id']
-        return self.makelolapicall('/v1.1/stats/by-summoner/' + summonerid + '/summary')
+        return self.makelolapicall('/v1.1/stats/by-summoner/' + str(summonerid) + '/summary')
 
     def get_stats_ranked(self, name):
         """Takes a summoner name
@@ -117,7 +117,7 @@ class LoLpy:
         """
         name = name.replace(' ','')
         summonerid = get_summoner_by_name(name)['id']
-        return self.makelolapicall('/v1.1/stats/by-summoner/' + summonerid + '/ranked')
+        return self.makelolapicall('/v1.1/stats/by-summoner/' + str(summonerid) + '/ranked')
 
     def get_summoner_masteries(self, name):
         """Takes a summoner name
@@ -125,7 +125,7 @@ class LoLpy:
         """
         name = name.replace(' ','')
         summonerid = get_summoner_by_name(name)['id']
-        return self.makelolapicall('/v1.1/summoner/' + summonerid + '/masteries')
+        return self.makelolapicall('/v1.1/summoner/' + str(summonerid) + '/masteries')
 
     def get_summoner_runes(self, name):
         """Takes a summoner name
@@ -133,12 +133,12 @@ class LoLpy:
         """
         name = name.replace(' ','')
         summonerid = get_summoner_by_name(name)['id']
-        return self.makelolapicall('/v1.1/summoner/' + summonerid + '/runes')
+        return self.makelolapicall('/v1.1/summoner/' + str(summonerid) + '/runes')
 
     def get_summoner(self, name):
         name = name.replace(' ','')
         summonerid = get_summoner_by_name(name)['id']
-        return self.makelolapicall('/v1.1/summoner/' + summonerid)
+        return self.makelolapicall('/v1.1/summoner/' + str(summonerid))
 
     def get_summoner_name(self, name):
         """Takes a summoner name
@@ -146,7 +146,7 @@ class LoLpy:
         """
         name = name.replace(' ','')
         summonerid = get_summoner_by_name(name)['id']
-        return self.makelolapicall('/v1.1/summoner/' + summonerid + '/name')
+        return self.makelolapicall('/v1.1/summoner/' + str(summonerid) + '/name')
 
     def get_team(self, name):
         """Takes a summoner name
@@ -154,4 +154,4 @@ class LoLpy:
         """
         name = name.replace(' ','')
         summonerid = get_summoner_by_name(name)['id']
-        return self.makeproapicall('/v2.1/team/by-summoner' + summonerid)
+        return self.makeproapicall('/v2.1/team/by-summoner' + str(summonerid))
