@@ -101,7 +101,7 @@ class LoLpy:
         """
         name = name.replace(' ','')
         summonerid = get_summoner_by_name(name)['id']
-        return self.makeproapicall('/v2.1/league/by-summoner/' + str(summonerid) + '/recent')
+        return self.makeproapicall('/v2.1/league/by-summoner/' + str(summonerid))
 
     def get_stats_summary(self, name):
         """Takes a summoner name
