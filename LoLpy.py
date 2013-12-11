@@ -85,7 +85,7 @@ class LoLpy:
         """Takes a summoner name
         Returns information about the summoner
         """
-        return self.makelolapicall('/v1.1/summoner/by-name' + name)
+        return self.makelolapicall('/v1.1/summoner/by-name/' + name)
     
     def get_game(self, name):
         """Takes a summoner name, 
