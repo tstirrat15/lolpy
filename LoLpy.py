@@ -7,11 +7,14 @@ class LoLpy:
     Attributes:
         api_key     Necessary to make api calls to riot. Can get one at https://developer.riotgames.com/sign-in?fhs=true
         region      What server you would like to access.
+        cache_ids   if set to True will store dict of name->summonerId to reduce api calls
     """
 
-    def __init__(self, api_key, region = 'na'):
+    def __init__(self, api_key, region = 'na', cache_ids=False):
         self.api_key = api_key
         self.region = region
+        self.cache_ids=cache_ids
+        self.cache=dict()
 
     def makelolapicall(self, func):
         """Returns a api call to league of legends"""
@@ -85,6 +88,11 @@ class LoLpy:
         """Takes a summoner name
         Returns information about the summoner
         """
+        if self.cache_ids:
+            if name not in self.cache:
+                self.cache[name]=self.makelolapicall('/v1.1/summoner/by-name/' + name)
+            return self.cache[name]
+            
         return self.makelolapicall('/v1.1/summoner/by-name/' + name)
     
     def get_game(self, name):

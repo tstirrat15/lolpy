@@ -1,6 +1,7 @@
 import LoLpy
 from info import API_KEY
 
+
 def main():
     print "Let's get started!"
     lolpy = LoLpy.LoLpy(API_KEY)
