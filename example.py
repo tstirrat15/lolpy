@@ -6,7 +6,6 @@ def main():
     print "Let's get started!"
     lolpy = LoLpy.LoLpy(API_KEY)
     account = lolpy.get_summoner_by_name('Dyrus')
-    league = lolpy.get_league_by_id(account['id'])
     ranked = lolpy.get_stats_ranked('Dyrus')
     print ranked
 
