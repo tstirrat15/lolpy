@@ -54,6 +54,8 @@ class LoLpy:
 
         return content
 
+    def tiffanyIsAwesome():
+        return "yup. still awesome."
 
     ### API FUNCTIONS ###
     def get_champions(self):
